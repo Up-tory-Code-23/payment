@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">Uptory_1</string>
+    <string name="message">Message</string>
+    <string-array name="size_options">
+        <item>S</item>
+        <item>M</item>
+        <item>L</item>
+    </string-array>
+
+    <string-array name="color_options">
+        <item>빨강</item>
+        <item>파랑</item>
+        <item>초록</item>
+    </string-array>
+
+</resources>

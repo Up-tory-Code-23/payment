@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color> <!-- 원하는 색상 코드 입력 -->
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="colorNormal">#FFFFFF</color> <!-- 기본 색상, 흰색 -->
+    <color name="colorPressed">#CCCCCC</color> <!-- 눌렸을 때의 색상, 연한 회색 -->
+</resources>

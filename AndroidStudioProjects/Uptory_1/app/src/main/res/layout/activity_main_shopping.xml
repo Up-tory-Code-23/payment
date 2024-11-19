@@ -1,0 +1,186 @@
+<!-- 쇼핑몰 메인 화면 XML 코드: ScrollView 사용 -->
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- 검색 바 -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:padding="8dp">
+
+            <EditText
+                android:id="@+id/search_bar"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:hint="검색어를 입력하세요"
+                android:background="@drawable/search_bar_bg"
+                android:padding="12dp" />
+
+            <ImageButton
+                android:id="@+id/search_button"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_search"
+                android:background="@null"
+                android:contentDescription="검색 버튼" />
+        </LinearLayout>
+
+        <!-- 배너 이미지 -->
+
+        <!-- 카테고리 아이콘들 -->
+
+        <GridLayout
+            android:id="@+id/category_grid"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnCount="5"
+            android:paddingTop="16dp"
+            android:paddingBottom="16dp"
+            android:gap="8dp">
+
+            <!-- 예시 카테고리 아이템들 -->
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_category_dolls"
+                android:background="@drawable/rounded_button_bg"
+                android:layout_margin="8dp"
+                android:contentDescription="인형 카테고리" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_category_bag"
+                android:background="@drawable/rounded_button_bg"
+                android:layout_margin="8dp"
+                android:contentDescription="가방 카테고리" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_category_shoes"
+                android:background="@drawable/rounded_button_bg"
+                android:layout_margin="8dp"
+                android:contentDescription="신발 카테고리" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_category_wallet"
+                android:background="@drawable/rounded_button_bg"
+                android:layout_margin="8dp"
+                android:contentDescription="지갑 카테고리" />
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_category_dolls"
+                android:background="@drawable/rounded_button_bg"
+                android:layout_margin="8dp"
+                android:contentDescription="인형 카테고리" />
+            <!-- 필요한 만큼 추가 -->
+        </GridLayout>
+
+        <!-- 추천 상품 리스트 -->
+        <TextView
+            android:id="@+id/recommended_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="회원님을 위한 추천상품"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:paddingBottom="8dp" />
+
+        <!-- 추천 상품 Horizontal ScrollView -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 예시 추천 상품 -->
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/linear_layout_border"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="200dp"
+                        android:src="@drawable/product01"
+                        android:scaleType="centerCrop"
+                        android:layout_marginTop="10dp"
+                        android:contentDescription="추천 상품 1" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[PAPARAZZI] Soft Hobo Bag (Black)"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="99,000"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="200dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/linear_layout_border"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:layout_width="180dp"
+                        android:layout_height="200dp"
+                        android:layout_marginTop="10dp"
+                        android:src="@drawable/product02"
+                        android:scaleType="centerCrop"
+                        android:contentDescription="추천 상품 2" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="[PAPARAZZI] Curved Wallet (Black)"
+                        android:gravity="center"
+                        android:layout_marginTop="4dp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="28,000"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="4dp" />
+                </LinearLayout>
+
+                <!-- 필요한 만큼 추가 -->
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <!-- 다른 섹션 추가 가능 -->
+
+    </LinearLayout>
+</ScrollView>

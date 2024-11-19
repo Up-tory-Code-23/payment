@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="8dp">
+
+    <!-- 날짜 표시 -->
+    <TextView
+        android:id="@+id/chatDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="4dp"
+        android:text="2024-09-25"
+        android:textColor="@android:color/darker_gray"
+        android:textSize="12sp"
+        android:visibility="gone" /> <!-- 기본적으로 숨겨져 있다가 날짜 변경 시 보임 -->
+
+    <!-- 프로필 사진, 이름, 메시지 및 시간 -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <!-- 프로필 사진 -->
+        <ImageView
+            android:id="@+id/profileImage"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_profile_placeholder"
+            android:visibility="gone" />
+
+        <!-- 이름과 메시지, 시간 -->
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <!-- 사용자 이름 -->
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="UserName"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:visibility="gone" /> <!-- 기본적으로 숨김 -->
+
+            <!-- 메시지 및 시간 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- 채팅 메시지 -->
+                <RelativeLayout
+                    xmlns:android="http://schemas.android.com/apk/res/android"
+                    android:id="@+id/tech_message"
+                    android:layout_width="280dp"
+                    android:layout_height="36dp"
+                    android:background="#F5F5F5" >
+
+                    <!-- Combined Shape -->
+                    <View
+                        android:id="@+id/combined_sh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/combined_sh" />
+
+                    <!-- Message Text -->
+                    <TextView
+                        android:id="@+id/chatMessage"
+                        android:layout_width="0dp"
+                        android:layout_height="22dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginLeft="14dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_marginRight="14dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_marginTop="7dp"
+                        android:text="@string/message"
+                        android:textAppearance="@style/message"
+                        android:lineSpacingExtra="2sp"
+                        android:translationY="-0.86sp"
+                        android:gravity="top" />
+                </RelativeLayout>
+
+
+                <!-- 보낸 시간 표시 -->
+                <TextView
+                    android:id="@+id/chatTime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="4dp"
+                    android:text="12:34"
+                    android:textColor="@android:color/darker_gray"
+                    android:textSize="12sp" />
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
